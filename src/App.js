@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from "react-router-dom"
 import Home from './pages/Home';
 import Restricted from './pages/Restricted';
+import Error from './pages/Error';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/restricted" element={<Restricted />} />
+      <Route path="/error" element={<Error />} />
     </Routes>
   )
 }
