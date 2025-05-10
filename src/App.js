@@ -1,19 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Routes, Route } from "react-router-dom"
+import Home from './pages/Home';
+import Restricted from './pages/Restricted';
+
 
 function App() {
   const [data, setData] = useState('');
 
   useEffect(() => {
     (async function () {
-      const {text} = await fetch(`/api/message`)
-      .then(res => res.json());
-      
+      const { text } = await fetch(`/api/message`)
+        .then(res => res.json());
+
       setData(text);
     })();
   });
 
-  return <div>{data}</div>;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/restricted" element={<Restricted />} />
+    </Routes>
+  )
 }
 
 export default App;
