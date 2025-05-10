@@ -20,7 +20,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home data={data} />} />
       <Route path="/restricted" element={<Restricted />} />
       <Route path="/error" element={<Error />} />
     </Routes>
