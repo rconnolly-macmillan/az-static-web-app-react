@@ -6,6 +6,7 @@ function Home({ data }) {
         <div>
             <h1>{data}</h1>
             <a href="/.auth/login/aad">Login</a>
+            <a href="/.auth/logout/aad">Logout</a>
         </div>
     )
 }
