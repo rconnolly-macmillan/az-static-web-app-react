@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from './pages/Home';
 import Restricted from './pages/Restricted';
 import Error from './pages/Error';
+import Page from './pages/Page';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/" element={<Home data={data} />} />
       <Route path="/restricted" element={<Restricted />} />
       <Route path="/error" element={<Error />} />
+      <Route path="/contribute" element={<Page content={"test content"} />} />
     </Routes>
   )
 }
