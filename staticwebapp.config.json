@@ -8,6 +8,15 @@
             ]
         },
         {
+            "route": "/",
+            "allowedRoles": [
+                "anonymous"
+            ],
+            "headers": {
+                "Cache-Control": "public, max-age=604800, immutable"
+            }
+        },
+        {
             "route": "/login",
             "redirect": "/.auth/login/aad"
         },
@@ -28,6 +37,10 @@
             "statusCode": 302,
             "redirect": "/.auth/login/aad"
         }
+    },
+    "globalHeaders": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
     },
     "mimeTypes": {
         ".json": "text/json"

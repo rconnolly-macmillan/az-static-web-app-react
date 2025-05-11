@@ -6,7 +6,10 @@ function Page({ content }) {
     useEffect(() => {
         (async function () {
             const res = await fetch(`/api/message`, {content})
-                .then(res => res.json());
+                .then(res => {
+                    const data = res.json();
+                    return data;
+                })
 
             setData(res);
         })();

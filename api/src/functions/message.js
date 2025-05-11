@@ -7,7 +7,7 @@ app.http('message', {
         console.log('Request:',request);
         console.log('Context:',context);
         
-        const json = JSON.stringify({data: "test"})
+        const json = JSON.stringify({data: {request, context}})
         return { body: json };
     }
 });
