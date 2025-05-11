@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Page({ content }) {
     return (
         <div>
-            <h1>This is the generic page ${content}</h1>
+            <h1>${content}</h1>
         </div>
     )
 }
