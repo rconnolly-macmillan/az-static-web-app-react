@@ -5,11 +5,17 @@ function Page({ content }) {
     const [data, setData] = useState('');
     useEffect(() => {
         (async function () {
-            const res = await fetch(`/api/message`, {content})
-                .then(res => {
-                    const data = res.json();
-                    return data;
-                })
+            const res = await fetch(`/api/message`, {
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                  },
+                  method: "POST",
+                  body: JSON.stringify(content)
+            }).then(res => {
+                const data = res.json();
+                return data;
+            })
 
             setData(res);
         })();
