@@ -8,6 +8,12 @@
             ]
         },
         {
+            "route": "/contribute*",
+            "allowedRoles": [
+                "Contributor"
+            ]
+        },
+        {
             "route": "/login",
             "redirect": "/.auth/login/aad"
           }
