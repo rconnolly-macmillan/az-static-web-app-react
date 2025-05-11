@@ -2,12 +2,6 @@
     "trailingSlash": "auto",
     "routes": [
         {
-            "route": "/*",
-            "allowedRoles": [
-                "anonymous"
-            ]
-        },
-        {
             "route": "/restricted*",
             "allowedRoles": [
                 "authenticated"
