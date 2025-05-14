@@ -10,9 +10,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home data={`Home Page`} />} />
       <Route path="/restricted" element={<Page content={"Restricted Page"} />} />
-      <Route path="/error" element={<Page content={"Error Page"} />} />
-      <Route path="/contribute" element={<Page content={"Contributor Page"} />} />
-      <Route path="/pages/profile" element={<Page content={"Profile Page"} />} />
+      <Route path="/restricted" element={<Page content={"Admin Page"} />} />
     </Routes>
   )
 }
